@@ -146,7 +146,7 @@ export function CommentSidebar({
                   </Avatar>
                   <div className="flex-1">
                     <p className="text-sm font-semibold">
-                      {comment.author.username}
+                      {/* {comment.author.username} */}Author
                     </p>
                     <p className="text-sm text-muted-foreground">
                       {comment.content}
