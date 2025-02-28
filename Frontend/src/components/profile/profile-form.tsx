@@ -19,6 +19,12 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Camera, Upload, Loader2 } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
+interface User {
+  username: string;
+  email: string;
+  photo: string;
+}
+
 export function ProfileForm() {
   const router = useRouter();
 
@@ -31,7 +37,7 @@ export function ProfileForm() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [preview, setPreview] = useState<string>("");
-  const [activeUser, setActiveUser] = useState({});
+  const [activeUser, setActiveUser] = useState<User | null>();
 
   useEffect(() => {
     const getActiveUser = async () => {
